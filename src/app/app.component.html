@@ -1,0 +1,32 @@
+<button (click)="addDom()">addDom</button>&nbsp;&nbsp;
+<button (click)="clearDom()">clearDom</button>&nbsp;&nbsp;
+<button (click)="replaceTabLinkCss()">replace css (nz-tab-link ~ *)</button>
+<nz-tabset nzLinkRouter>
+  <nz-tab nzClosable>
+    <a
+      *nzTabLink
+      nz-tab-link
+      [routerLink]="['.']"
+      [queryParams]="{ tab: 'one' }"
+      queryParamsHandling="merge"
+      
+    >
+      Default
+    </a>
+    Default.
+  </nz-tab>
+  <nz-tab>
+    <a
+      *nzTabLink
+      nz-tab-link
+      [routerLink]="['.']"
+      [queryParams]="{ tab: 'two' }"
+      queryParamsHandling="merge"
+    >
+      Two
+    </a>
+    Two.
+  </nz-tab>
+</nz-tabset>
+
+<div *ngFor="let item of aaa">{{ item }}</div>
